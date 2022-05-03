@@ -28,5 +28,3 @@ operators.forEach(element => {
     });
 });
 
-
-
