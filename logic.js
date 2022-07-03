@@ -17,8 +17,9 @@ evaluator.addEventListener('click', () => {
         output.value = output.value.replaceAll('a1/Math.sin(', 'asin(1/');
         output.value = output.value.replaceAll('a1/Math.cos(', 'acos(1/');
         output.value = output.value.replaceAll('a1/Math.tan(', 'atan(1/');
+        output.value = output.value.replaceAll('π', Math.PI);
+        output.value = output.value.replaceAll('°', '*Math.PI/180');
     });
-    console.log(output.value);
     let result = eval(output.value.replaceAll('X', '*'));
     output.value = result;
 });

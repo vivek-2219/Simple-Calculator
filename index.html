@@ -14,7 +14,7 @@
     <div class="container">
         <form name="simple">
             <table>
-                <input type="text" name="output" class="output" placeholder="Calculator">
+                <input type="text" name="output" class="output" placeholder="Calculator" style="cursor: default;" readonly>
                 <tr>
                     <td><input type="button" value="AC" onclick="simple.output.value = ''"></td>
                     <td><input class="lastValueSlicer" type="button" value="C"></td>
@@ -49,9 +49,9 @@
         </form>
         <form name="trigonometric">
             <table>
-                <input style="opacity: 0">
+                <input class="zeroOpacity">
                 <tr>
-                    <td><input type="button" value="°"></td>
+                    <td><input type="button" value="°" onclick="simple.output.value += '°'"></td>
                     <td><input type="button" value="π" onclick="simple.output.value += 'π'"></td>
                     <td><input type="button" value="[" onclick="simple.output.value += '['"></td>
                     <td><input type="button" value="]" onclick="simple.output.value += ']'"></td>

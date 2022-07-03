@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body {
+    background-color: gray;
+    color: white;
+}
+
 nav {
     background-color: black;
     height: 56px;
@@ -14,6 +19,21 @@ nav select {
     border: 2px solid;
     border-radius: 6px;
     margin: 12px;
+}
+
+.btns {
+    background-color: blue;
+}
+
+.btn{
+    list-style: none;
+    text-decoration: none;
+    font-size: 23px;
+    background-color: white;
+    color: black;
+    border: 1px solid red;
+    margin: 3px;
+    width: 178px;
 }
 
 .container {
@@ -45,6 +65,7 @@ input {
     box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.8);
     outline: none;
     z-index: 12;
+    cursor: pointer;
 }
 
 td :hover {
@@ -60,5 +81,10 @@ td :hover {
     .output {
         width: 283px;
     }
+}
+
+.zeroOpacity {
+    cursor: default;
+    opacity: 0;
 }
 
