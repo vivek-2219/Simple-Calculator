@@ -16,7 +16,7 @@
             <table>
                 <input type="text" name="output" class="output" placeholder="Calculator" style="cursor: default;" readonly>
                 <tr>
-                    <td><input type="button" value="AC" onclick="simple.output.value = ''"></td>
+                    <td><input class="allClear" type="button" value="AC" onclick="simple.output.value = ''"></td>
                     <td><input class="lastValueSlicer" type="button" value="C"></td>
                     <td><input type="button" value="+/-" onclick="simple.output.value *= '-1'"></td>
                     <td><input class="evaluator" type="button" value="="></td>
@@ -51,8 +51,8 @@
             <table>
                 <input class="zeroOpacity">
                 <tr>
-                    <td><input type="button" value="°" onclick="simple.output.value += '°'"></td>
-                    <td><input type="button" value="π" onclick="simple.output.value += 'π'"></td>
+                    <td><input class="degree" type="button" value="°" onclick="simple.output.value += '°'"></td>
+                    <td><input class="PI" type="button" value="π" onclick="simple.output.value += 'π'"></td>
                     <td><input type="button" value="[" onclick="simple.output.value += '['"></td>
                     <td><input type="button" value="]" onclick="simple.output.value += ']'"></td>
                 </tr>

@@ -4,6 +4,10 @@ let evaluator = document.querySelector('.evaluator');
 let lastValueSlicer = document.querySelector('.lastValueSlicer');
 let numbers = document.querySelectorAll('.numbers');
 let mathematicalOperators = ['+', '-', '/'];
+let degree = document.querySelector('.degree');
+let PI = document.querySelector('.PI');
+let allClear = document.querySelector('.allClear');
+console.log(degree, PI, allClear);
 
 evaluator.addEventListener('click', () => {
     let functions = ['sin', 'cos', 'tan', 'cosec', 'sec', 'cot', 'asin', 'acos', 'atan', 'acosec', 'asec', 'acot'];
@@ -69,6 +73,8 @@ operators.forEach(element => {
 
 // Remove degree and PI symbol concatination.
 // Prevent the begining of closing brackets.
+// Prevent numbers after degree and PI symbol.
+// Multiply numbers with PI when spelled together.
 
 
 
