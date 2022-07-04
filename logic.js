@@ -13,8 +13,8 @@ let degreeAndPI = ['°', 'π'];
 // Logics for EQUAL TO operator.
 evaluator.addEventListener('click', () => {
     let functions = ['sin', 'cos', 'tan', 'cosec', 'sec', 'cot', 'asin', 'acos', 'atan', 'acosec', 'asec', 'acot'];
-    let PIErrorArray = ['π1', 'π2', 'π3', 'π4', 'π5', 'π6', 'π7', 'π8', 'π9', 'π0', '1π', '2π', '3π', '4π', '5π', '6π', '7π', '8π', '9π', '0π']
-    let degreeErrorArray = ['°1', '°2', '°3', '°4', '°5', '°6', '°7', '°8', '°9', '°0'];
+    let PIErrorArray = ['π1', 'π2', 'π3', 'π4', 'π5', 'π6', 'π7', 'π8', 'π9', 'π0', '1π', '2π', '3π', '4π', '5π', '6π', '7π', '8π', '9π', '0π'];
+    let degreeErrorArray = ['°1', '°2', '°3', '°4', '°5', '°6', '°7', '°8', '°9', '°0', '°π'];
 
     // Solving errors related with PI and numbers concatination. Multiplying Numbers with PI when concatinated.
     PIErrorArray.forEach(element => {
@@ -25,7 +25,9 @@ evaluator.addEventListener('click', () => {
 
     // Showing errors for Degree and Number concatination.
     degreeErrorArray.forEach(element => {
-
+        if (output.value.match(element)) {
+            output.value = output.value.replaceAll(element, element.slice(1));
+        };
     });
 
     // Dealing with TRIGONOMETRIC AND INVERSE TRIGONOMETRIC functions including PI and degree values.
@@ -112,11 +114,9 @@ operators.forEach(element => {
 
 
 
+// Degree Error.
+// Return error when occured.
 
-// Prevent Degree and PI symbol mutual concatination.
-// Prevent the begining of closing brackets.
-// Prevent numbers after degree and PI symbol.
-// Return Error when occured.
 
 
 
