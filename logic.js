@@ -51,3 +51,13 @@ operators.forEach(element => {
     });
 });
 
+
+
+
+
+// Last value slicer in trigonometric functions.
+// Remove degree and PI symbol concatination.
+// Prevent the begining of closing brackets.
+
+
+
