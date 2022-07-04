@@ -25,6 +25,18 @@ evaluator.addEventListener('click', () => {
 });
 
 lastValueSlicer.addEventListener('click', () => {
+    let inverseFunctions = ['asin(', 'acos(', 'atan(', 'acosec(', 'asec(', 'acot('];
+    let functions = ['sin(', 'cos(', 'tan(', 'cosec(', 'sec(', 'cot('];
+    for (let index = 0; index < inverseFunctions.length; index++) {
+        if (output.value.endsWith(inverseFunctions[index])) {
+            output.value = output.value.slice(0, (output.value.length - (inverseFunctions[index].length - 1)));
+        };
+    };
+    for (let index = 0; index < functions.length; index++) {
+        if (output.value.endsWith(functions[index])) {
+            output.value = output.value.slice(0, (output.value.length - (functions[index].length - 1)));
+        };
+    };
     output.value = output.value.slice(0, output.value.length - 1);
 });
 
@@ -55,7 +67,6 @@ operators.forEach(element => {
 
 
 
-// Last value slicer in trigonometric functions.
 // Remove degree and PI symbol concatination.
 // Prevent the begining of closing brackets.
 
