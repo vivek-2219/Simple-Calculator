@@ -16,7 +16,7 @@ evaluator.addEventListener('click', () => {
     let PIErrorArray = ['π1', 'π2', 'π3', 'π4', 'π5', 'π6', 'π7', 'π8', 'π9', 'π0', '1π', '2π', '3π', '4π', '5π', '6π', '7π', '8π', '9π', '0π'];
     let degreeErrorArray = ['°1', '°2', '°3', '°4', '°5', '°6', '°7', '°8', '°9', '°0', '°π'];
 
-    // Solving errors related with PI and numbers concatination. Multiplying Numbers with PI when concatinated.
+    // Solving errors related with PI and numbers concatination. Multiplying Numbers with PI or PI with PI when concatinated.
     PIErrorArray.forEach(element => {
         if (output.value.match(element)) {
             output.value = output.value.replaceAll(element, `${(element[0])}X${(element[1])}`);
@@ -24,11 +24,11 @@ evaluator.addEventListener('click', () => {
     });
 
     // Showing errors for Degree and Number concatination.
-    degreeErrorArray.forEach(element => {
-        if (output.value.match(element)) {
-            output.value = output.value.replaceAll(element, element.slice(1));
-        };
-    });
+    // degreeErrorArray.forEach(element => {
+    //     if (output.value.match(element)) {
+    //         output.value = output.value.replaceAll(element, element.slice(1));
+    //     };
+    // });
 
     // Dealing with TRIGONOMETRIC AND INVERSE TRIGONOMETRIC functions including PI and degree values.
     functions.forEach(element => {
@@ -46,8 +46,13 @@ evaluator.addEventListener('click', () => {
     });
 
     // Evaluating the output using eval function.
-    let result = eval(output.value.replaceAll('X', '*'));
-    output.value = result;
+    try {
+        let result = eval(output.value.replaceAll('X', '*'));
+        output.value = result;
+    }
+    catch (error) {
+        output.value = 'Error';
+    }
 });
 
 // Solving error for Degree-Degree concatination.
@@ -111,12 +116,6 @@ operators.forEach(element => {
         });
     });
 });
-
-
-
-// Degree Error.
-// Return error when occured.
-
 
 
 
