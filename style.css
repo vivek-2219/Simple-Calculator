@@ -81,6 +81,10 @@ td :hover {
     .output {
         width: 283px;
     }
+
+    input {
+        font-size: 23px;
+    }
 }
 
 .zeroOpacity {
